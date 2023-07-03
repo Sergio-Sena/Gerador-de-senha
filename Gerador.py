@@ -12,7 +12,7 @@ para_números = '0123456789'
 #Itens para Randomizar
 use = para_minúsculo+para_maiúscula+para_números+para_simbolos
 # Digitos para senha de 8 caracteres
-tamanho_da_senha = 8
+tamanho_da_senha = 9
 #Variavel com a senha e o join para juntar as caracteres randomizados  
 senha = ''.join(random.sample(use,tamanho_da_senha))
 #print com a senha gerada

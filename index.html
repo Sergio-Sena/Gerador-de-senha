@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Gerador de Senhas</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <link rel="stylesheet" href="./Style.css">
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  </style>
+  <script>
+    function gerarSenha() {
+      // Gerador de senha
+      // Importar Biblioteca Random para Randomizar
+      var para_maiúscula = 'ABCDEFGHIJKLMNOPQRSTUVXWYZ';
+      // variavel para Letras maiúscula
+      var para_minúsculo = 'abcdefghijklmnopqrstuvxwyz';
+      // variavel para Simbolos
+      var para_simbolos = '!#$%&\?/';
+      // variavel para Números
+      var para_números = '0123456789';
+      // Itens para Randomizar
+      var use = para_minúsculo + para_maiúscula + para_números + para_simbolos;
+      // Digitos para senha de 8 caracteres
+      var tamanho_da_senha = 9;
+      // Variavel com a senha e o join para juntar as caracteres randomizados
+      var senha = Array.from({length: tamanho_da_senha}, () => use[Math.floor(Math.random() * use.length)]).join('');
+      // Imprimir a senha gerada na tela
+      document.getElementById('senhaGerada').textContent = senha;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="imagem">
+      <img class="imagem-site" src="./pics/8585055530951202(GIF).gif" alt="Mulher guerreira">
+    </div>
+    <div class="codigo-python">
+      <button onclick="gerarSenha()">Gerar Senha</button>
+      <br>
+      <span id="senhaGerada"></span>
+    </div>
+  </div>
+</body>
+</html>

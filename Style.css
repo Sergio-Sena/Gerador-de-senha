@@ -1,0 +1,33 @@
+body {
+    background-color: salmon;
+}
+
+.imagem {
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.imagem-site {
+
+    width: 300px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+}
+
+codigo-python {
+    .senhaGerada {
+        background-color: whitesmoke;
+    }
+}
